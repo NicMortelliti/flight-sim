@@ -10,4 +10,12 @@ export const SkyGround = styled.div`
   min-width: 300dvw;
   background: linear-gradient(0deg, ${ground} 50%, ${sky} 50%);
   background-position: center;
+
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  overflow: hidden;
 `;

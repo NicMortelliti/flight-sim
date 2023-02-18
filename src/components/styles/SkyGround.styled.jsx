@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
 const sky = "blue";
-const ground = "brown";
+const ground = "saddlebrown";
 
-export const SkyGround = styled.div`
-  min-height: 300vh;
-  min-height: 300dvh;
-  min-width: 300vw;
-  min-width: 300dvw;
-  background: linear-gradient(0deg, ${ground} 50%, ${sky} 50%);
-  background-position: center;
-
+export const Sky = styled.div`
+  min-height: 200vh;
+  min-height: 200dvh;
+  min-width: 200vw;
+  min-width: 200dvw;
+  background: ${sky};
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  right: -9999px;
-  margin: auto;
-  overflow: hidden;
+  bottom: ${({ top }) => `${top}%`};
+  transform: ${({ angle }) => `rotate(${angle}deg)`};
+`;
+
+export const Ground = styled.div`
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-width: 100vw;
+  min-width: 100dvw;
+  background: ${ground};
 `;

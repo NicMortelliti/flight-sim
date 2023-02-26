@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
@@ -10,8 +10,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-
   }
 `;
 
-export default GlobalStyles;
+export const GlobalWrapper = styled.div`
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+`;

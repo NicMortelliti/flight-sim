@@ -1,15 +1,17 @@
 import React from "react";
 
-import { Ground, Sky } from "../styles/SkyGround.styled";
+import { SGCont, Ground, Sky } from "../styles/SkyGround.styled";
 
 const SkyGround = () => {
-  const angle = 20;
-  const groundPercent = 15;
+  const angle = 0;
+  const groundPercent = 30;
 
   return (
-    <Ground>
-      <Sky angle={angle} top={groundPercent}></Sky>
-    </Ground>
+    <SGCont>
+      <Ground>
+        <Sky angle={angle} top={100 - groundPercent}></Sky>
+      </Ground>
+    </SGCont>
   );
 };
 
